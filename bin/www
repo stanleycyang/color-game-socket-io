@@ -1,0 +1,10 @@
+'use strict'
+
+// Bring in the app
+const app = require('../server/index.js');
+const http = require('http').Server(app);
+
+// Listen on the PORT
+http.listen(3000, function() {
+  console.log(`Listening on ${this.address().port}`);
+});
