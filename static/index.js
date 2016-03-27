@@ -9,7 +9,6 @@ function randomColor() {
 
 // Handle the bubbling
 function bubbleUp(data) {
-  console.log(data);
   var x = data.x,
       y = data.y,
       color = data.color
@@ -28,14 +27,14 @@ function bubbleUp(data) {
 
   container.appendChild(bubble);
 
-  //setTimeout(function () {
-    //bubble.style.opacity = 0;
-    //bubble.style.padding = '100px';
-  //}, 0);
+  setTimeout(function () {
+    bubble.style.padding = '100px';
+    bubble.style.opacity = '0';
+  }, 200);
 
-  //bubble.addEventListener('transitionend', function() {
-    //bubble.remove();
-  //}, false);
+  bubble.addEventListener('transitionend', function() {
+    bubble.remove();
+  }, false);
 
 }
 
